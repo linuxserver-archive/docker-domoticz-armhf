@@ -50,7 +50,7 @@ RUN \
 	instlibdir=usr/lib \
 	pkgconfigdir="usr/lib/pkgconfig/" \
 	PREFIX=/usr \
-	sysconfdir=etc/openzwave \
+	sysconfdir=/etc/openzwave \
 	install && \
 
 # build domoticz
