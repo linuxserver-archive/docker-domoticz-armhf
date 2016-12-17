@@ -9,9 +9,6 @@ LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DA
 # Environment settings
 ENV HOME="/config"
 
-# copy prebuilds
-COPY prebuilds/ /usr/
-
 # install build dependencies
 RUN \
  apk add --no-cache --virtual=build-dependencies \
@@ -50,7 +47,7 @@ RUN \
 	instlibdir=usr/lib \
 	pkgconfigdir="usr/lib/pkgconfig/" \
 	PREFIX=/usr \
-	sysconfdir=/etc/openzwave \
+	sysconfdir=etc/openzwave \
 	install && \
 
 # build domoticz
