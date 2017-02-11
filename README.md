@@ -32,8 +32,16 @@ docker create \
   -p 6144:6144 \
   -p 8080:8080 \
   --device=<path to device> \
-  lsioarmhf/domoticz
+  lsioarmhf/domoticz:stable-3.5877
 ```
+
+You can choose between using tags, latest (default, and no tag required), or a specific stable version of domoticz.
+
+Add one of the tags, if required, to the linuxserver/domoticz line of the run/create command in the following format, linuxserver/domoticz:stable-3.5877
+
+#### Tags
+
++ **stable-3.5877** : latest stable version.
 
 ## Parameters
 
@@ -99,4 +107,5 @@ The user manual is available at [www.domoticz.com][domoticzurl]
 
 ## Versions
 
-+ **03.01.17:** Initial Release.
++ **11.02.2017:** Stable release.
++ **03.01.2017:** Initial Release.
