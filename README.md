@@ -107,5 +107,5 @@ The user manual is available at [www.domoticz.com][domoticzurl]
 
 ## Versions
 
-+ **11.02.2017:** Add info about tags.
++ **12.02.2017:** Add info about tags, rebase to alpine 3.5, change from openssl to libressl and add telldus compiling.
 + **03.01.2017:** Initial Release.
