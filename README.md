@@ -105,5 +105,6 @@ The user manual is available at [www.domoticz.com][domoticzurl]
 
 ## Versions
 
++ **26.02.2017:** Add curl.
 + **11.02.2017:** Stable release.
 + **03.01.2017:** Initial Release.
