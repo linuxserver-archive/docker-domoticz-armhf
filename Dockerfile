@@ -115,6 +115,7 @@ RUN \
 
 # install runtime dependencies
  apk add --no-cache \
+	curl \
 	eudev-libs \
 	libressl \
 	python3 \
