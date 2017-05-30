@@ -107,6 +107,7 @@ The user manual is available at [www.domoticz.com][appurl]
 
 ## Versions
 
++ **30.05.2017:** Rebase to alpine 3.6.
 + **26.02.2017:** Add curl.
 + **12.02.2017:** Add info about tags, rebase to alpine 3.5, change from openssl to libressl and add telldus compiling.
 + **03.01.2017:** Initial Release.
