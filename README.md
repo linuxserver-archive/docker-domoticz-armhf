@@ -3,6 +3,7 @@
 [ircurl]: https://www.linuxserver.io/irc/
 [podcasturl]: https://www.linuxserver.io/podcast/
 [appurl]: https://www.domoticz.com
+[hub]: https://hub.docker.com/r/lsioarmhf/domoticz/
 
 [![linuxserver.io](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver_medium.png)][linuxserverurl]
 
@@ -12,6 +13,7 @@ The [LinuxServer.io][linuxserverurl] team brings you another container release f
 * [Podcast][podcasturl] covers everything to do with getting the most from your Linux Server plus a focus on all things Docker and containerisation!
 
 # lsioarmhf/domoticz
+[![](https://images.microbadger.com/badges/version/lsioarmhf/domoticz.svg)](https://microbadger.com/images/lsioarmhf/domoticz "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/lsioarmhf/domoticz.svg)](https://microbadger.com/images/lsioarmhf/domoticz "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/lsioarmhf/domoticz.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/lsioarmhf/domoticz.svg)][hub][![Build Status](https://ci.linuxserver.io/buildStatus/icon?job=Docker-Builders/armhf/armhf-domoticz)](https://ci.linuxserver.io/job/Docker-Builders/job/armhf/job/armhf-domoticz/)
 
 [Domoticz][appurl] is a Home Automation System that lets you monitor and configure various devices like: Lights, Switches, various sensors/meters like Temperature, Rain, Wind, UV, Electra, Gas, Water and much more. Notifications/Alerts can be sent to any mobile device
 
@@ -30,7 +32,7 @@ docker create \
   -p 6144:6144 \
   -p 8080:8080 \
   --device=<path to device> \
-  lsioarmhf/domoticz:stable-3.5877
+  lsioarmhf/domoticz
 ```
 
 You can choose between using tags, latest (default, and no tag required), or a specific stable version of domoticz.
@@ -105,6 +107,7 @@ The user manual is available at [www.domoticz.com][appurl]
 
 ## Versions
 
++ **30.05.2017:** Rebase to alpine 3.6.
 + **26.02.2017:** Add curl.
-+ **11.02.2017:** Stable release.
++ **12.02.2017:** Add info about tags, rebase to alpine 3.5, change from openssl to libressl and add telldus compiling.
 + **03.01.2017:** Initial Release.
