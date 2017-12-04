@@ -1,6 +1,9 @@
 FROM lsiobase/alpine.armhf:3.6
 MAINTAINER saarg
 
+# package version
+ARG DOMOTICZ_VER="3.8153"
+
 # set version label
 ARG BUILD_DATE
 ARG VERSION
@@ -39,6 +42,7 @@ RUN \
 	make \
 	mosquitto-dev \
 	musl-dev \
+	openzwave-dev \
 	pkgconf \
 	sqlite-dev \
 	tar \
@@ -49,13 +53,13 @@ RUN \
 	curl \
 	eudev-libs \
 	libressl \
+	openzwave \
 	python3-dev && \
 
 # link libftdi as the alpine guys named the libs wrong
  ln -s /usr/lib/libftdi1.so /usr/lib/libftdi.so && \
  ln -s /usr/lib/libftdi1.a /usr/lib/libftdi.a && \
  ln -s /usr/include/libftdi1/ftdi.h /usr/include/ftdi.h && \
-
 
 # build telldus-core
  mkdir -p \
@@ -79,20 +83,8 @@ RUN \
  ln -s /usr/lib/libtelldus-core.so.2.1.2 /usr/lib/libtelldus-core.so.2 && \
  ln -s /usr/lib/libtelldus-core.so.2 /usr/lib/libtelldus-core.so && \
 
-# build OpenZWave
- git clone https://github.com/OpenZWave/open-zwave.git /tmp/open-zwave && \
- ln -s /tmp/open-zwave /tmp/open-zwave-read-only && \
- cd /tmp/open-zwave && \
- make && \
- make \
-	instlibdir=usr/lib \
-	pkgconfigdir="usr/lib/pkgconfig/" \
-	PREFIX=/usr \
-	sysconfdir=etc/openzwave \
- install && \
-
 # build domoticz
- git clone https://github.com/domoticz/domoticz.git /tmp/domoticz && \
+ git clone -b "${DOMOTICZ_VER}" https://github.com/domoticz/domoticz.git /tmp/domoticz && \
  cd /tmp/domoticz && \
  cmake \
 	-DBUILD_SHARED_LIBS=True \
