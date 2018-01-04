@@ -108,8 +108,9 @@ The user manual is available at [www.domoticz.com][appurl]
 
 ## Versions
 
-+ **26.11.2017:** Use cpu core counting routine to speed up build time.
-+ **30.05.2017:** Rebase to alpine 3.6.
-+ **26.02.2017:** Add curl.
-+ **12.02.2017:** Add info about tags, rebase to alpine 3.5, change from openssl to libressl and add telldus compiling.
-+ **03.01.2017:** Initial Release.
++ **04.01.18:** Rebase to alpine 3.7, Deprecate cpu_core routine lack of scaling.
++ **26.11.17:** Use cpu core counting routine to speed up build time.
++ **30.05.17:** Rebase to alpine 3.6.
++ **26.02.17:** Add curl.
++ **12.02.17:** Add info about tags, rebase to alpine 3.5, change from openssl to libressl and add telldus compiling.
++ **03.01.17:** Initial Release.
