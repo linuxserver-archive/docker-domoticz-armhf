@@ -108,6 +108,8 @@ The user manual is available at [www.domoticz.com][appurl]
 
 ## Versions
 
++ **20.01.18:** Move telldus core to repo to prevent build fail when source site goes down.
++ **18.01.18:** Remove logging to syslog in the run command to prevent double logging.
 + **04.01.18:** Rebase to alpine 3.7, Deprecate cpu_core routine lack of scaling.
 + **26.11.17:** Use cpu core counting routine to speed up build time.
 + **30.05.17:** Rebase to alpine 3.6.
